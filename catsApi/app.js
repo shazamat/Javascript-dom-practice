@@ -7,7 +7,6 @@ async function fetchHandler() {
     try {
         const response = await fetch(url)
         const data = await response.json()
-        console.log(data[0].url);
 
         img.src = data[0].url
 
