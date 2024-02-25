@@ -7,9 +7,9 @@ async function fetchHandler() {
     try {
         const response = await fetch(url)
         const data = await response.json()
+        console.log(data[0].url);
 
-    
-        console.log(data[url]);
+        img.src = data[0].url
 
     } catch (error) {
         throw new Error(error)
@@ -17,5 +17,9 @@ async function fetchHandler() {
 }
 
 
-
-fetchHandler()
+button.addEventListener('click', () => {
+    let isLoaded = img.complete
+    if (isLoaded) {
+        fetchHandler();
+    }
+})
