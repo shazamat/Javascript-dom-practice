@@ -10,8 +10,8 @@ async function fetchHandler() {
 
         img.src = data[0].url
 
-    } catch (error) {
-        throw new Error(error)
+    } catch (e) {
+        throw new Error(e)
     }
 }
 
